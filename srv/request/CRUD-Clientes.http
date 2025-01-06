@@ -1,0 +1,71 @@
+### Get Clientes v4
+GET http://localhost:4004/odata/v4/catalog/Clientes 
+
+### Get Clientes v2
+GET http://localhost:4004/odata/v2/catalog/Clientes 
+
+### Get Product v4
+GET http://localhost:4004/odata/v4/catalog/Clientes('08c142fa-01b0-441d-b01d-eeaa3291f6f0')
+
+### Get Product v2
+GET http://localhost:4004/odata/v2/catalog/Clientes?$filter=Name eq 'Milk'
+
+### Create Product v4
+POST http://localhost:4004/odata/v4/catalog/Clientes HTTP/1.1
+Content-Type: application/json
+
+{
+    "Name": "Sample Product",
+    "Description": "A detailed description of the product.",
+    "ImageUrl": "https://example.com/image.jpg",
+    "ReleaseDate": "1992-01-01T00:00:00Z",
+    "DiscontinuedDate": "1992-01-01T00:00:00Z",
+    "Price": 1.0,
+    "Height": 2.0,
+    "Width": 3.0,
+    "Depth": 4.0,
+    "Quantity": 5,
+    "OtherUUID": "123e4567-e89b-12d3-a456-426614174000"
+}
+
+### Create Product v2
+POST http://localhost:4004/odata/v2/catalog/Clientes HTTP/1.1
+Content-Type: application/json
+
+{
+"Nombre": "new",
+"Apellido": "Doe",
+"CorreoElectronico": "john.doe@example.com",
+"Telefono": "1234567890",
+"Direccion": "123 Main St",
+"Ciudad": "Metropolis",
+"Pais": "USA",
+"FechaRegistro": "2023-01-01",
+"Estado": "Activo"
+}
+
+
+
+### Update Product PATCH v4
+PATCH http://localhost:4004/odata/v4/catalog/Clientes ('08c142fa-01b0-441d-b01d-eeaa3291f6f0') HTTP/1.1
+Content-Type: application/json
+
+{
+    "Quantity": "100",
+    "Name": "Actualizado v4"
+}
+
+### Update Product PATCH v2
+PATCH http://localhost:4004/odata/v2/catalog/Clientes ('08c142fa-01b0-441d-b01d-eeaa3291f6f0') HTTP/1.1
+Content-Type: application/json
+
+{
+    "Quantity": "100",
+    "Name": "Actualizado v2"
+}
+
+###Delete Product v4
+DELETE http://localhost:4004/odata/v4/catalog/Clientes('08c142fa-01b0-441d-b01d-eeaa3291f6f0')
+
+###Delete Product v2
+DELETE http://localhost:4004/odata/v2/catalog/Clientes('ea610da1-ea93-4258-85e1-099167d67bf9')

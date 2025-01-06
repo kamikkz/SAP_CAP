@@ -1,5 +1,8 @@
-### Get Products
+### Get Products v4
 GET http://localhost:4004/odata/v4/catalog/Products 
+
+### Get Products v2
+GET http://localhost:4004/odata/v2/catalog/Products 
 
 ### Get Product v4
 GET http://localhost:4004/odata/v4/catalog/Products('08c142fa-01b0-441d-b01d-eeaa3291f6f0')
